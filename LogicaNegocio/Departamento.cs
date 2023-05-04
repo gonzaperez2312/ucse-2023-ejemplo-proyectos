@@ -11,5 +11,7 @@ namespace LogicaNegocio
         public int Codigo { get; set; }
 
         public Dueño Dueño { get; set; }
+
+        public Departamento() { }
     }
 }

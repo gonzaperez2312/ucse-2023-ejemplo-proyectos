@@ -18,17 +18,17 @@ namespace LogicaNegocio
             ListaDepartamentos.Add(new Departamento() { Codigo = 103 });
         }
 
-        public bool AgregarDepartamento(int nroDepto, string nombre)
+        public bool AgregarDepartamento(Departamento departamento)
         {
-            if (nroDepto == 0)
+            if (departamento.Codigo == 0)
             {
                 return false;
             }
 
             Departamento depto = new Departamento()
             {
-                Codigo = nroDepto,
-                Dueño = new Dueño() { Nombre = nombre }
+                Codigo = departamento.Codigo,
+                Dueño = departamento.Dueño
             };
 
             ListaDepartamentos.Add(depto);
